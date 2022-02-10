@@ -95,150 +95,89 @@
     </div>
 </nav>		
 
-<section id="gtco-menu" class="section-padding">
+
+<!-- Registracija Section -->
+<section id="gtco-Registracija" class="bg-fixed bg-white section-padding overlay" style="background-image: url(img/raketa.png);">
     <div class="container">
-        <div class="section-content">
-            <div class="row mb-5">
-                <div class="col-md-12">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-content bg-white p-5 shadow">
                     <div class="heading-section text-center">
-                        <span class="subheading">
-                            Svi recepti
-                        </span>
                         <h2>
-                            Recepti
+                            Dodaj recept:
                         </h2>
-                    </div>  
+                    </div>
+                    <form method="post" action="">
+                        <div class="row">
+                            <div class="col-md-12 form-group">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Unesite ime recepta:"> 
+                            </div>
+                            <div class="col-md-12 text-center">
+                                <div class="form-group">
+                                    <label for="vrsta" id="vrstt">Vrsta:</label>
+                                    <div class='radio-container'>
+                                    <input checked="" id="glavno" name="vrsta" type="radio" value="glavno">
+                                    <label for="glavno" id="glavv">Glavno</label>
+                                    <input id="desert" name="vrsta" type="radio" value="desert">
+                                    <label for="desert" id="dezz">Desert</label>
+                                    <input id="predijelo" name="vrsta" type="radio" value="predijelo">
+                                    <label for="predijelo" id="predd">Predijelo</label>
+                                    <input id="uzina" name="vrsta" type="radio" value="uzina">
+                                    <label for="uzina" id="uzz">Užina</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="tezina" id="tezz">Težina:</label>
+                                    <div class='radio-container'>
+                                    <input checked="" id="1" name="tezina" type="radio" value="1">
+                                    <label for="1" id="tezz1">1</label>
+                                    <input id="2" name="tezina" type="radio" value="2">
+                                    <label for="2" id="tezz2">2</label>
+                                    <input id="3" name="tezina" type="radio" value="3">
+                                    <label for="3" id="tezz3">3</label>
+                                    <input id="4" name="tezina" type="radio" value="4">
+                                    <label for="4" id="tezz4">4</label>
+                                    <input id="5" name="tezina" type="radio" value="5">
+                                    <label for="5" id="tezz5">5</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="trajanje" id="trajj">Trajanje:</label>
+                                    <div class='radio-container'>
+                                    <input checked="" id="brzo" name="trajanje" type="radio" value="0 min - 30 min">
+                                    <label for="brzo" id="brzz">0 min - 30 min</label>
+                                    <input id="srednje" name="trajanje" type="radio" value="30 min - 60 min">
+                                    <label for="srednje" id="sredd">30 min - 60 min</label>
+                                    <input id="sporo" name="trajanje" type="radio" value="60+ min">
+                                    <label for="sporo" id="sporr">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;60+ min&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                    </div>
+                                </div>
+                            </div>  
+                            <div class="col-md-12 text-center form-group">
+                                <textarea class="form-control" rows="10" placeholder="Unesite tekst recepta ..."></textarea>
+                            </div>
+                            <div class="col-md-12 text-center">
+                                <button class="btn btn-primary" onclick="document.getElementById('slika').click()" id="izabsll" >Dodaj fotografiju</button>
+                                <input type="file"  accept="image/*" name="slika" id="slika" style="display: none;" onchange="loadPicture(event)" required>	
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <button class="btn btn-primary" onclick="document.getElementById('video').click()" id="izabvidd">Dodaj video</button>
+                                <input type="file"  accept="video/*" name="video" id="video" style="display: none;" onchange="loadVideo(event)" required>
+                            </div>
+                            <br>
+                            <br>
+                            <br>
+                            <div class="col-md-12 text-center">
+                                <button class="btn btn-primary btn-shadow btn-lg" type="submit" name="submit">DODAJ RECEPT</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-4 menu-wrap">
-                    <div class="menus d-flex align-items-center">
-                        <div class="menu-img rounded-circle">
-                            <img class="img-fluid" src="img/hero-1.jpg" alt="">
-                        </div>
-                        <div class="text-wrap">
-                            <div class="row align-items-start">
-                                <div class="col-8">
-                                    <h4>Recept</h4>
-                                </div>
-                            </div>
-                            <p>Vrsta: Težina: Trajanje: </p>
-                        </div>
-                    </div>
-                    <div class="menus d-flex align-items-center">
-                        <div class="menu-img rounded-circle">
-                            <img class="img-fluid" src="img/hero-2.jpg" alt="">
-                        </div>
-                        <div class="text-wrap">
-                            <div class="row align-items-start">
-                                <div class="col-8">
-                                    <h4>Recept</h4>
-                                </div>
-                            </div>
-                            <p>Vrsta: Težina: Trajanje: </p>
-                        </div>
-                    </div>
-                    <div class="menus d-flex align-items-center">
-                        <div class="menu-img rounded-circle">
-                            <img class="img-fluid" src="img/hero-3.jpg" alt="">
-                        </div>
-                        <div class="text-wrap">
-                            <div class="row align-items-start">
-                                <div class="col-8">
-                                    <h4>Recept</h4>
-                                </div>
-                            </div>
-                            <p>Vrsta: Težina: Trajanje: </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 menu-wrap">
-                    <div class="menus d-flex align-items-center">
-                        <div class="menu-img rounded-circle">
-                            <img class="img-fluid" src="img/hero-4.jpg" alt="">
-                        </div>
-                        <div class="text-wrap">
-                            <div class="row align-items-start">
-                                <div class="col-8">
-                                    <h4>Recept</h4>
-                                </div>
-                            </div>
-                            <p>Vrsta: Težina: Trajanje: </p>
-                        </div>
-                    </div>
-                    <div class="menus d-flex align-items-center">
-                        <div class="menu-img rounded-circle">
-                            <img class="img-fluid" src="img/hero-5.jpg" alt="">
-                        </div>
-                        <div class="text-wrap">
-                            <div class="row align-items-start">
-                                <div class="col-8">
-                                    <h4>Recept</h4>
-                                </div>
-                            </div>
-                            <p>Vrsta: Težina: Trajanje: </p>
-                        </div>
-                    </div>
-                    <div class="menus d-flex align-items-center">
-                        <div class="menu-img rounded-circle">
-                            <img class="img-fluid" src="img/hero-6.jpg" alt="">
-                        </div>
-                        <div class="text-wrap">
-                            <div class="row align-items-start">
-                                <div class="col-8">
-                                    <h4>Recept</h4>
-                                </div>
-                            </div>
-                            <p>Vrsta: Težina: Trajanje: </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 menu-wrap">
-                    <div class="menus d-flex align-items-center">
-                        <div class="menu-img rounded-circle">
-                            <img class="img-fluid" src="img/hero-7.jpg" alt="">
-                        </div>
-                        <div class="text-wrap">
-                            <div class="row align-items-start">
-                                <div class="col-8">
-                                    <h4>Recept</h4>
-                                </div>
-                            </div>
-                            <p>Vrsta: Težina: Trajanje: </p>
-                        </div>
-                    </div>
-                    <div class="menus d-flex align-items-center">
-                        <div class="menu-img rounded-circle">
-                            <img class="img-fluid" src="img/hero-8.jpg" alt="">
-                        </div>
-                        <div class="text-wrap">
-                            <div class="row align-items-start">
-                                <div class="col-8">
-                                    <h4>Recept</h4>
-                                </div>
-                            </div>
-                            <p>Vrsta: Težina: Trajanje: </p>
-                        </div>
-                    </div>
-                    <div class="menus d-flex align-items-center">
-                        <div class="menu-img rounded-circle">
-                            <img class="img-fluid" src="img/hero-9.jpg" alt="">
-                        </div>
-                        <div class="text-wrap">
-                            <div class="row align-items-start">
-                                <div class="col-8">
-                                    <h4>Recept</h4>
-                                </div>
-                            </div>
-                            <p>Vrsta: Težina: Trajanje: </p>
-                        </div>
-                    </div>
-                </div>
-            </div>		
-        </div> 
-    </div>       
+        </div>
+        
+    </div>
+</section>
+<!-- End of Registracija Section -->		
 
 <footer class="mastfoot pb-5 bg-white section-padding pb-0">
     <div class="inner container">

@@ -28,7 +28,7 @@ h1, h2 {
   background-color: #fff; }
 
 .bg-grey {
-  background-color: #fff6fb;
+    background-color: rgb(252, 228, 231);
 }
 
 a {
@@ -175,7 +175,7 @@ a:hover {
 
 .hero-carousel .owl-item img {
   height: 600px;
-  object-fit: cover;
+  object-fit:contain;
   max-width: 100%; }
   @media (min-width: 992px) {
     .hero-carousel .owl-item img {
@@ -505,3 +505,33 @@ a:hover {
     height: 500px; } }
 
 /*=====  End of RESPONSIVE  ======*/
+
+.radio-container {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  display: inline-block;
+  padding: 5px;
+}
+.radio-container label {
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  transition: 0.2s all ease-in-out;
+  width: auto;
+}
+
+.radio-container input[type=radio] {
+  display:none;
+}
+
+.radio-container input[type=radio]:checked + label {
+  background: #e0218a;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
